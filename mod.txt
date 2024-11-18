@@ -26,5 +26,13 @@
 			"hook_id":"lib/states/ingamelobbymenu",
 			"script_path":"legendary_dropper.lua"
 		}
-	]
+	],
+	"updates" : [
+    {
+      "identifier" : "lying_on_the_interent_lafe",
+      "host": {
+        "meta": "https://raw.githubusercontent.com/0lafe/lying_on_the_interent/refs/heads/main/meta.json"
+      }
+    }
+  ]
 }
