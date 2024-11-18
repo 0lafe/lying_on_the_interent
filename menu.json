@@ -1,0 +1,83 @@
+{
+  "menu_id" : "spoofing_menu",
+  "parent_menu_id" : "blt_options",
+  "title" : "spoofing_menu",
+  "description" : "spoofing_menu_desc",
+  "items" : [
+    {
+      "type": "toggle",
+      "id": "name_spoofing_enabled",
+      "title": "name_spoofing_enabled",
+      "description": "name_spoofing_enabled_desc",
+      "callback": "spoofer_toggle_boolean",
+      "value": "name_spoofing_enabled",
+      "default_value": false
+    },
+    {
+      "type" : "input",
+      "id" : "name_spoofing_input",
+      "title" : "name_spoofing_input",
+      "desc" : "name_spoofing_input_desc",
+      "callback" : "spoofer_toggle_menu_item",
+      "value" : "name_spoofing_input"
+    },
+    {
+      "type" : "toggle",
+      "id" : "name_spoofing_animated_name_input",
+      "title" : "name_spoofing_animated_name_input",
+      "desc" : "name_spoofing_animated_name_input_desc",
+      "callback" : "spoofer_toggle_menu_item",
+      "value" : "name_spoofing_animated_name_input"
+    },
+    {
+      "type" : "toggle",
+      "id" : "name_spoofing_lyrics_input",
+      "title" : "name_spoofing_lyrics_input",
+      "desc" : "name_spoofing_lyrics_input_desc",
+      "callback" : "spoofer_toggle_menu_item",
+      "value" : "name_spoofing_lyrics_input"
+    },
+    {
+      "type" : "divider",
+      "size" : 32
+    },
+    {
+      "type": "toggle",
+      "id": "infamy_spoofing_enabled",
+      "title": "infamy_spoofing_enabled",
+      "description": "infamy_spoofing_enabled_desc",
+      "callback": "spoofer_toggle_boolean",
+      "value": "infamy_spoofing_enabled",
+      "default_value": false
+    },
+    {
+      "type" : "input",
+      "id" : "infamy_spoofing_input",
+      "title" : "infamy_spoofing_input",
+      "desc" : "infamy_spoofing_input_desc",
+      "callback" : "spoofer_toggle_menu_item",
+      "value" : "infamy_spoofing_input"
+    },
+    {
+      "type" : "input",
+      "id" : "level_spoofing_input",
+      "title" : "level_spoofing_input",
+      "desc" : "level_spoofing_input_desc",
+      "callback" : "spoofer_toggle_menu_item",
+      "value" : "level_spoofing_input"
+    },
+    {
+      "type" : "divider",
+      "size" : 32
+    },
+    {
+      "type": "toggle",
+      "id": "lootdrop_spoof",
+      "title": "lootdrop_spoof",
+      "description": "lootdrop_spoof_desc",
+      "callback": "spoofer_toggle_boolean",
+      "value": "lootdrop_spoof",
+      "default_value": false
+    }
+  ]
+}
