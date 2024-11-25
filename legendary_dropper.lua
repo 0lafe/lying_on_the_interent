@@ -1,4 +1,4 @@
--- holdout
+-- -- holdout
 -- function IngameLobbyMenuState:update(t, dt)
 --   if self._is_generating_skirmish_lootdrop and managers.skirmish:has_finished_generating_additional_rewards() then
 --     self._is_generating_skirmish_lootdrop = nil
@@ -45,7 +45,8 @@
 --   end
 -- end
 
--- normal lootdrop
+-- normal
+-- lootdrop
 
 local old_set_lootdrop = IngameLobbyMenuState.set_lootdrop
 

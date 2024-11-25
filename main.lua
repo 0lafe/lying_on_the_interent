@@ -97,6 +97,10 @@ Spoofer._lyrics = {
   "I ain't post his mixtape 'cause I don't fuck with shorty"
 }
 
+function Spoofer:base_name()
+  return self._settings.name_spoofing_input
+end
+
 function Spoofer:name()
   if self._settings.name_spoofing_animated_name_input then
     return self:_animated_name()
