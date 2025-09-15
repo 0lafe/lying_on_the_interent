@@ -14,7 +14,14 @@ Spoofer._settings = {
   infamy_spoofing_enabled = false,
   infamy_spoofing_input = 0,
   level_spoofing_input = 100,
-  lootdrop_spoof = false
+  lootdrop_spoof = false,
+  animate_lobby = false
+}
+
+Spoofer._frames = {
+  "\\T/\n | \n/ \\",
+  " T/\n/|\n/ \\",
+  "\\T\n |\\\n/ \\"
 }
 
 Spoofer._name_values = {
@@ -22,11 +29,17 @@ Spoofer._name_values = {
   add = true,
   lyrics_index = 1,
   lyrics_slowdown = 0,
-  name_refresh = 0.3
+  name_refresh = 0.3,
+  animate_lobby_position = false,
+  animate_lobby_frame = 1
 }
 
 function Spoofer:name_enabled()
   return self._settings.name_spoofing_enabled
+end
+
+function Spoofer:lobby_name_enabled()
+  return self._settings.animate_lobby
 end
 
 function Spoofer:infamy_enabled()
@@ -97,8 +110,19 @@ Spoofer._lyrics = {
   "I ain't post his mixtape 'cause I don't fuck with shorty"
 }
 
-function Spoofer:base_name()
-  return self._settings.name_spoofing_input
+function Spoofer:lobby_name()
+  if self._settings.animate_lobby then
+    return self:_animated_lobby_name()
+  else
+    return self:name()
+  end
+end
+
+function Spoofer:_animated_lobby_name()
+  local frame = self._frames[self._name_values.animate_lobby_frame]
+  self._name_values.animate_lobby_frame = math.max((self._name_values.animate_lobby_frame + 1) % (#Spoofer._frames + 1), 1)
+
+  return frame
 end
 
 function Spoofer:name()
@@ -120,7 +144,7 @@ function Spoofer:_lyrics_name()
     self._name_values.lyrics_index = 1
   end
 
-  return out or "abcd"
+  return out or ""
 end
 
 function Spoofer:_animated_name()
@@ -182,6 +206,8 @@ Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_spoofer", 
     ["level_spoofing_input_desc"] = "Set level to spoof",
     ["lootdrop_spoof"] = "Lootdrop",
     ["lootdrop_spoof_desc"] = "Silly Little Lootdrops",
+    ["animate_lobby"] = "Animate Lobby Name",
+    ["animate_lobby_desc"] = "Animates lobby name with currently selected animation frames",
   })
 end)
 

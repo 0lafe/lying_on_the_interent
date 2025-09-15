@@ -29,14 +29,14 @@
 		{
 			"hook_id" : "lib/network/matchmaking/networkmatchmakingepic",
 			"script_path" : "lobbynamespoofer.lua"
-		},
+		}
 	],
 	"updates" : [
-    {
-      "identifier" : "lying_on_the_interent_lafe",
-      "host": {
-        "meta": "https://raw.githubusercontent.com/0lafe/lying_on_the_interent/refs/heads/main/meta.json"
-      }
-    }
-  ]
+		{
+			"identifier" : "lying_on_the_interent_lafe",
+			"host": {
+				"meta": "https://raw.githubusercontent.com/0lafe/lying_on_the_interent/refs/heads/main/meta.json"
+			}
+		}
+	]
 }

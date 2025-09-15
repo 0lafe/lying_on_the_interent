@@ -78,6 +78,15 @@
       "callback": "spoofer_toggle_boolean",
       "value": "lootdrop_spoof",
       "default_value": false
+    },
+    {
+      "type": "toggle",
+      "id": "animate_lobby",
+      "title": "animate_lobby",
+      "description": "animate_lobby_desc",
+      "callback": "spoofer_toggle_boolean",
+      "value": "animate_lobby",
+      "default_value": false
     }
   ]
 }
